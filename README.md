@@ -12,7 +12,7 @@ The original files are located in `files/original`, you need to move the into `f
 ```
 // The hour timestamp should be in 24 hour notation (14:00 = 2:00pm)
 // Rename Example:
-	my-text-file.txt -> my-text-file_EDITED_2015-05-31_14-22.txt 
+	my-text-file.txt -> my-text-file_EDITED_2015-05-31_14-22.txt
 
 // Old Location:
 	files/original/my-text-file.txt
@@ -26,14 +26,14 @@ The original files are located in `files/original`, you need to move the into `f
 	renamed 3 files, with 1 error (somefile.txt)
 ```
 
-For text files, append the four pieces of information to the text file on new lines below the original contents of the file. 
+For text files, append the four pieces of information to the text file on new lines below the original contents of the file.
 For json files, add new properties to the json file with the four pieces of information.
 
 Feel free to use any existing open source javascript libraries.
 
 ## Bonus tasks
 
-1. your script should be able to run from with command line with `npm start` 
+1. your script should be able to run from with command line with `npm start`
 2. your script should use a module to rename files, the module shoule be in `lib/rename.js`
 3. extra brownie points for writing another module to append the file information
 4. add tests to your project to ensure it would work well with other files besides the ones provided
@@ -42,3 +42,14 @@ Feel free to use any existing open source javascript libraries.
 
 * Document your assumptions.
 * You'll be reviewed on your code quality, completeness, efficiency, and documentation.
+
+##SB Notes
+
+1. run `npm install` to install a few packages - I added a linter, babel so I could use ES6,
+and momentjs and lodash for convenience.
+2. `npm run start` will run the linter and if passes runs the program
+3. `npm run clean` will remove the copied files directory
+4. I mainly focused on things that I'm excited about - ES6, linting, etc. Didn't
+leave a ton of comments, but tried to name things well in a self documenting sort of way.
+5. This is kinda callback hell, I would want to improve upon the async loop portion
+6. I added a bad json file to catch errors in parsing json.
